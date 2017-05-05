@@ -1,9 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Landing from './components/landing/landing.js'
 
 export default(
    <Switch>
-       <Route component={()=>(<h1>its commin on</h1>)} exact path='/'></Route>
+       <Route component={Landing} exact path='/'></Route>
    </Switch>
 
 )
