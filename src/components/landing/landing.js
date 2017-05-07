@@ -1,11 +1,16 @@
 import React, {Component} from 'react'
 import {Row, Col} from 'react-bootstrap'
+
+import LandingText from './landingComponents/landingText.js'
+
 class Landing extends Component{
     render(){
         return(
-            <div>
-                <h1 className='text-center'>Heres How I Did It</h1>
-            </div>
+            <Row>
+                <Col sm={8}>
+                    <LandingText></LandingText>
+                </Col>
+            </Row>
         )
     }
 }
