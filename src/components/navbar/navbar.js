@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import {Redirect} from 'react-router-dom'
-
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
+function NotLoggedIn(){
+	return (
+		<NavItem>Login</NavItem>
+	)
+}
+function loggedIn(){
+	return (
+		<LinkContainer to='home'>
+			<NavItem>Home</NavItem>
+		</LinkContainer>
+	)
+}
 function Navi({history}){
 
 		return (
@@ -14,7 +25,7 @@ function Navi({history}){
 				</Navbar.Header>
 				<Navbar.Collapse>
 					<Nav pullRight>
-						<NavItem onClick={()=>console.log(history)}>Stuff</NavItem>
+						{false?loggedIn():NotLoggedIn()}
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
