@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
+import {connect} from 'react-redux'
+import {login} from '../../ducks/user.js'
 function NotLoggedIn(){
 	return (
-		<NavItem>Login</NavItem>
+		<NavItem onClick={()=>login()}>Login</NavItem>
 	)
 }
 function loggedIn(){
@@ -13,8 +15,8 @@ function loggedIn(){
 		</LinkContainer>
 	)
 }
-function Navi({history}){
-
+function Navi(props){
+		console.log(props)
 		return (
 			<Navbar inverse collapseOnSelect>
 				<Navbar.Header>
@@ -25,10 +27,10 @@ function Navi({history}){
 				</Navbar.Header>
 				<Navbar.Collapse>
 					<Nav pullRight>
-						{false?loggedIn():NotLoggedIn()}
+						{props.user?loggedIn():NotLoggedIn()}
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
 		)
 }
-export default Navi
+export default connect(state => state, { })( Navi );

@@ -6,5 +6,4 @@ export default(
    <Switch>
        <Route component={Landing} exact path='/'></Route>
    </Switch>
-
 )

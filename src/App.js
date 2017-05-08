@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
 
 import Navigation from './components/navbar/navbar.js'
 
@@ -17,4 +18,5 @@ class App extends Component {
 	}
 }
 
-export default App;
+// export default App;
+export default connect(state => state, { })( App );
