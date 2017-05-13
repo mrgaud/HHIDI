@@ -1,6 +1,6 @@
 import axios from 'axios'
 const initialState={
-    user:undefined
+    user:'fish'
 };
 const SET_USER = 'SET_USER';
 export function login(){
