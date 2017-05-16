@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 function Login( props ) {
@@ -10,4 +10,4 @@ function Login( props ) {
 	)
 }
 
-export default connect(state => state, { })( Login )
+export default connect(state => state, {})( Login )

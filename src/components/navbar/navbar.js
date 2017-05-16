@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 import {connect} from 'react-redux'
@@ -33,4 +33,4 @@ function Navi(props){
 			</Navbar>
 		)
 }
-export default connect(state => state, { })( Navi );
+export default connect(state => state, {login})( Navi );
