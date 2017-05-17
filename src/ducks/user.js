@@ -1,14 +1,24 @@
-import axios from 'axios'
-const initialState={
-    user:'fish'
-};
-const SET_USER = 'SET_USER';
-export function login(){
-    axios.get('https://jsonplaceholder.typicode.com').then(res=>console.log(res))
-};
+const SET_USER = 'SET_USER'
 
-export default function user(state = initialState, action){
-    switch (action.type) {
-        default: return state;
-    }
-};
+import axios from 'axios'
+import store from '../store.js'
+const initialState = {
+	user: undefined
+}
+
+export function login( email, password ) {
+	store.dispatch({ email, password, type: SET_USER })
+}
+export default function userReducer( state = initialState, action ) {
+	console.log( state, action );
+	switch ( action.type ) {
+		case SET_USER:
+			return {
+				user: action.email
+			}
+			break;
+		default:
+			return state;
+
+	}
+}
