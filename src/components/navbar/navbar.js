@@ -16,7 +16,6 @@ function loggedIn(){
 	)
 }
 function Navi(props){
-		console.log(props)
 		return (
 			<Navbar inverse collapseOnSelect>
 				<Navbar.Header>
@@ -33,4 +32,4 @@ function Navi(props){
 			</Navbar>
 		)
 }
-export default connect(state => state, {login})( Navi );
+export default connect(state=>state)(Navi);

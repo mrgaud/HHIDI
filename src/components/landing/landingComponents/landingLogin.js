@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {
+	Panel,
+	Form,
+	FormGroup,
+	FormControl,
+	ControlLabel,
+	Button
+} from 'react-bootstrap'
 
-function Login( props ) {
-	console.log( props );
+function Login(props){
+	console.log(props);
 	return (
 		<div>
-			stuff
+			<Form>
+				<FormGroup>
+					<ControlLabel>Email</ControlLabel>
+					<FormControl ></FormControl>
+				</FormGroup>
+			</Form>
 		</div>
-	)
+	);
 }
 
-export default connect(state => state, {})( Login )
+export default connect(state => state)( Login );

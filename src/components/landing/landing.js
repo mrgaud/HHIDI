@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
 import {Row, Col} from 'react-bootstrap'
+import './landing.css'
 
-import LandingText from './landingComponents/landingText.js'
 import LandingLogin from './landingComponents/landingLogin.js'
+import LandingText from './landingComponents/landingText.js'
 
 class Landing extends Component{
     render(){
         return(
-            <Row>
+            <Row id='landingContainer'>
                 <Col sm={8}>
                     <LandingText></LandingText>
                 </Col>
